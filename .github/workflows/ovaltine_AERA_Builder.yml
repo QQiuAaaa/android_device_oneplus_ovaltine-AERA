@@ -110,11 +110,11 @@ jobs:
 
           mkdir -p ${GITHUB_WORKSPACE}/aera
           cd ${GITHUB_WORKSPACE}/aera
-          git config --global user.name "${{ github.actor }}"
-          git config --global user.email "${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com"
-          repo init -u git@github.com:AERA-Recovery/android_manifest.git \
-            -b ${{ inputs.MANIFEST_BRANCH }}
+          git config --global user.name "QQiuAaaa"
+          git config --global user.email "125430057+QQiuAaaa@users.noreply.github.com"
+          repo init -u https://github.com/AERA-Recovery/android_manifest.git -b aera-16.0
           repo sync -c -j$(nproc)
+
 
       - name: 克隆设备树源码
         run: |
