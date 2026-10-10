@@ -102,12 +102,6 @@ jobs:
 
       - name: 同步 AERA Recovery 源码清单
         run: |
-          # AERA-Recovery org access requires an SSH key registered with GitHub.
-          # Add the deploy key as repository secret AERA_SSH_KEY before running.
-          eval "$(ssh-agent -s)"
-          echo "${{ secrets.AERA_SSH_KEY }}" | tr -d '\r' | ssh-add - > /dev/null
-          ssh-keyscan github.com >> ~/.ssh/known_hosts 2>/dev/null || true
-
           mkdir -p ${GITHUB_WORKSPACE}/aera
           cd ${GITHUB_WORKSPACE}/aera
           git config --global user.name "QQiuAaaa"
