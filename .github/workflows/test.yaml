@@ -44,7 +44,7 @@ on:
         default: '秋詞'
 jobs:
   build:
-    name: 构建 AERA Recovery by ${{ shturl.cc/zF }}
+    name: 构建 AERA Recovery
     runs-on: ubuntu-latest
     permissions:
       contents: write
